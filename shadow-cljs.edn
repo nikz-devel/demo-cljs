@@ -9,9 +9,10 @@
   [cljsjs/react "17.0.2-0"]
   [cljsjs/react-dom "17.0.2-0"]]
 
+ :dev-http {3000 "resources"}
+
  :builds
  {:app {:target :browser
-        :output-dir "public/js"
-        :asset-path "/js"
-        :modules {:main {:init-fn core/init!}}
-        :devtools {:watch-dir "public"}}}}
+        :output-dir "resources/public/js"
+        :asset-path "public/js"
+        :modules {:main {:init-fn core/init}}}}}
