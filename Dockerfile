@@ -1,6 +1,7 @@
 FROM strategicblue/cljs-builder:latest as build
 WORKDIR /build
 COPY . .
+RUN npm install
 RUN npx shadow-cljs release app
 
 FROM python:3.12
